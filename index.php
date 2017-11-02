@@ -12,6 +12,7 @@
         while ($line = fgets($fh)) {
           echo($line);
         }
+        file_put_contents("data.txt", "");
         fclose($fh);
       ?>
 

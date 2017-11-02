@@ -1,6 +1,5 @@
 <?php
-        echo "works";
-        echo  $_POST["clean"];
+        echo ("works");
            if( $_POST["clean"]){
                file_put_contents("data.txt", "");
                echo "works2";
