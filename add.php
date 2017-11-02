@@ -9,7 +9,7 @@
               $x = $_POST['x'];
               $y = $_POST['y'];
                
-              $add = $x . " " . $y . "\n";
+              $add = $x . " " . $y . "\xA";
                
               $file = file_put_contents('data.txt', $add.PHP_EOL , FILE_APPEND | LOCK_EX);
             
