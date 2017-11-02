@@ -1,24 +1,22 @@
+<?php 
+    $myfile = fopen("data.txt", "r") or die("Unable to open file!");
+    $dataAge = fgets($myfile);
+    fclose($myfile);
+    
+?>
 
 <html>
-   <body>
-        <?php
-           if( $_POST["name"] || $_POST["age"] ) {
-              if (preg_match("/[^A-Za-z'-]/",$_POST['name'] )) {
-                 die ("invalid name and name should be alpha");
-              }
-              $name = $_POST['name'];
-              $age = $_POST['age'];
+   <head>
+      <title>Test</title>
+   </head>
+<body>
+   <h1>Age</h1>
 
-              $file = fopen("data.txt", "w") or die("Unable to open file!");
-              fwrite($file, $age);
-              fclose($file);
-               
-               $myfile = fopen("data.txt", "r") or die("Unable to open file!");
-               echo fgets($myfile);
-               fclose($myfile);
-              
-              exit();
-           }
-        ?>
-   </body>
+
+      <?php 
+		  printf($dataAge);
+      ?>
+
+   </table>
+</body>
 </html>
