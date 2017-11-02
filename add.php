@@ -6,8 +6,8 @@
               $name = $_POST['name'];
               $age = $_POST['age'];
 
-              $file = fopen("data.txt", "w") or die("Unable to open file!");
-              fwrite($file, $age);
+//              $file = fopen("data.txt", "w") or die("Unable to open file!");
+              $file = file_put_contents('data.txt', $age.PHP_EOL , FILE_APPEND | LOCK_EX);
               fclose($file);
               
               exit();
