@@ -6,11 +6,9 @@
               $name = $_POST['name'];
               $age = $_POST['age'];
 
-              $file = fopen("data.txt", "w") or die("Unable to open file!");
-              fwrite($file, $age);
+              $file = fopen("data.txt", "a") or die("Unable to open file!");
+              fwrite($file, "\n". $name);
               fclose($file);
-               
-               echo "<meta http-equiv='refresh' content='0'>";
               
               exit();
            }
