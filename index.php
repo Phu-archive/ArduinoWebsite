@@ -10,9 +10,9 @@
 
         $fh = fopen('data.txt','r');
         while ($line = fgets($fh)) {
-          // <... Do your work with the line ...>
           echo($line);
         }
+        file_put_contents("data .txt", "");
         fclose($fh);
       ?>
 
