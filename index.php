@@ -5,12 +5,13 @@
       }
       $name = $_POST['name'];
       $age = $_POST['age'];
+       
       echo($name);
-      
+      exit();
    }
 ?>
 <html>
    <body>
-   
+        <? echo($name); ?>
    </body>
 </html>
