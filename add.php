@@ -9,7 +9,10 @@
               $file = fopen("data.txt", "w") or die("Unable to open file!");
               fwrite($file, $age);
               fclose($file);
+               
+               echo "<meta http-equiv='refresh' content='0'>";
               
               exit();
            }
+            
 ?>
