@@ -12,7 +12,7 @@
 <html>
    <body>
    
-      <?php echo $name ?>
+      <?php echo $name; ?>
    
    </body>
 </html>
