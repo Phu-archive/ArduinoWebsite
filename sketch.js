@@ -76,7 +76,8 @@ function draw(){
       line(0, 90 * i, 810, 90 * i);
     }
     
-    board = getBoard(slider.value());
+    var val = slider.value();
+    board = getBoard(val);
 //    console.log(slider.value());
 //    
     drawUpdateGrid(board);
