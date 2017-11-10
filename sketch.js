@@ -34,25 +34,27 @@ function drawUpdateGrid(board){
 }
 
 function getBoard(loc){
-    board = []
-    lastResult = result[loc];
+    var newboard = []
+    var lastResult = result[loc]
+    
     for (var i = 0; i < 9; i++) {
-      board[i] = lastResult.substring(i*9, i*9+9);
+      newboard[i] = lastResult.substring(i*9, i*9+9);
     }
     
+    return newboard;
 }
 
 function preload() {
     result = loadStrings('data.txt');
-    console.log(result);
+    if(result.length == 0){
+        alert("There is no content in the history.");
+    }
 }
 
 function setup(){
     var canvas = createCanvas(810, 810);
     canvas.parent('sketch-holder');
     
-    slider = createSlider(0, result.length-1, result.length-1, 1);
-    slider.position(100, 100);
     board = getBoard(result.length-1);
 
     background(255);
@@ -74,8 +76,7 @@ function draw(){
       line(0, 90 * i, 810, 90 * i);
     }
     
-    var val = slider.value();
     board = getBoard(val);
     
-    setTimeout(drawUpdateGrid(board), 1000);
+    drawUpdateGrid(board), 1000;
 }
