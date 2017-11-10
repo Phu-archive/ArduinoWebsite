@@ -38,6 +38,7 @@ function setup(){
     var lastResult = result[result.length-1]
     
     console.log(result);
+    console.log(lastResult);
     
     for (var i = 0; i < 9; i++) {
       board[i] = lastResult.substring(i*9, i*9+9);
