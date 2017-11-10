@@ -40,7 +40,7 @@ function setup(){
     console.log(result);
     
     for (var i = 0; i < 9; i++) {
-      board[i] = result.substring(i*9, i*9+9);
+      board[i] = lastResult.substring(i*9, i*9+9);
     }
     
     background(255);
