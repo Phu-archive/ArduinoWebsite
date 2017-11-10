@@ -19,7 +19,7 @@ function drawRectAtBoardPos(pos_x, pos_y, player_number){
   rect(start_rect_x, start_rect_y, 90, 90);
 }
 
-function drawUpdateGrid(){
+function drawUpdateGrid(board){
   for(var x = 0; x < 9; x++){
     for (var y = 0; y < 9; y++) {
       if (board[y][x] == 1) {
@@ -62,7 +62,7 @@ function draw(){
     board = getBoard(slider.value());
     console.log(board)
     
-    drawUpdateGrid();
+    drawUpdateGrid(board);
 
     // Draing a grid.
     stroke(0);
