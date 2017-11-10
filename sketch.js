@@ -2,6 +2,8 @@ var board = [];
 var coord = [];
 var current_player = 1;
 var result = "";
+var slider;
+
 
 // This is the drawing part of the program.
 function drawRectAtBoardPos(pos_x, pos_y, player_number){
@@ -51,6 +53,7 @@ function setup(){
     canvas.parent('sketch-holder');
     
     slider = createSlider(0, result.length-1, result.length-1, 1);
+    slider.position(10, 10);
     board = getBoard(result.length-1);
 
     background(255);
