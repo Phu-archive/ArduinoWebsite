@@ -50,6 +50,7 @@ function setup(){
     canvas.parent('sketch-holder');
     
     board = getBoard(result.length-1);
+    slider = createSlider(0, result.length-1, result.length-1, 1);
   
     background(255);
 }
@@ -57,6 +58,8 @@ function setup(){
 
 function draw(){
     drawUpdateGrid();
+    
+    console.log(slider.value());
 
     // Draing a grid.
     stroke(0);
