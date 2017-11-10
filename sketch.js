@@ -35,7 +35,7 @@ function drawUpdateGrid(board){
 
 function getBoard(loc){
     board = []
-    
+    lastResult = result[loc];
     for (var i = 0; i < 9; i++) {
       board[i] = lastResult.substring(i*9, i*9+9);
     }
