@@ -57,21 +57,7 @@ function setup(){
 }
 
 
-function draw(){
-
-    console.log(slider.value());
-    board = getBoard(slider.value());
-    console.log(board)
-    
-    for(var x = 0; x < 9; x++){
-        for (var y = 0; y < 9; y++) {
-            if (board[y][x] == 1) {
-                drawRectAtBoardPos(x+1, y+1, 1);
-            } else if (board[y][x] == 2){
-                drawRectAtBoardPos(x+1, y+1, 2);
-            }
-        }
-    }
+function draw(){    
 
     // Draing a grid.
     stroke(0);
@@ -85,4 +71,10 @@ function draw(){
       strokeWeight(2);
       line(0, 90 * i, 810, 90 * i);
     }
+    
+    console.log(slider.value());
+    board = getBoard(slider.value());
+    console.log(board)
+    
+    drawUpdateGrid(board);
 }
