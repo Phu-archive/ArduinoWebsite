@@ -20,15 +20,16 @@ function drawRectAtBoardPos(pos_x, pos_y, player_number){
 }
 
 function drawUpdateGrid(board){
-  for(var x = 0; x < 9; x++){
-    for (var y = 0; y < 9; y++) {
-      if (board[y][x] == 1) {
-        drawRectAtBoardPos(x+1, y+1, 1);
-      } else if (board[y][x] == 2){
-        drawRectAtBoardPos(x+1, y+1, 2);
-      }
+    console.log("!!");
+    for(var x = 0; x < 9; x++){
+        for (var y = 0; y < 9; y++) {
+            if (board[y][x] == 1) {
+                drawRectAtBoardPos(x+1, y+1, 1);
+            } else if (board[y][x] == 2){
+                drawRectAtBoardPos(x+1, y+1, 2);
+            }
+        }
     }
-  }
 }
 
 function getBoard(loc){
@@ -62,7 +63,15 @@ function draw(){
     board = getBoard(slider.value());
     console.log(board)
     
-    drawUpdateGrid(board);
+    for(var x = 0; x < 9; x++){
+        for (var y = 0; y < 9; y++) {
+            if (board[y][x] == 1) {
+                drawRectAtBoardPos(x+1, y+1, 1);
+            } else if (board[y][x] == 2){
+                drawRectAtBoardPos(x+1, y+1, 2);
+            }
+        }
+    }
 
     // Draing a grid.
     stroke(0);
