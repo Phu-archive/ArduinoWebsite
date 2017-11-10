@@ -14,17 +14,6 @@
           
         
         <div class="col row-md-offset-2">
-            
-            <?php
-
-                $fh = fopen('data.txt','r');
-                while ($line = fgets($fh)) {
-                  echo($line);
-                }
-
-                fclose($fh);
-              ?>
-            
             <div id="sketch-holder">
               <!-- Our sketch will go here! -->
             </div>
@@ -38,7 +27,7 @@
                             type: 'POST',
                             url: 'delete.php',
                             success: function(data) {
-                                alert("Delete Successful");
+                                alert("Delete Successful Now refresh the page");
                             }
                         });
                });
