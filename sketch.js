@@ -31,6 +31,13 @@ function drawUpdateGrid(){
   }
 }
 
+function getBoard(loc){
+    lastResult = result[loc]
+    for (var i = 0; i < 9; i++) {
+      board[i] = lastResult.substring(i*9, i*9+9);
+    }
+}
+
 function preload() {
   result = loadStrings('data.txt');
 }
@@ -39,16 +46,8 @@ function setup(){
     var canvas = createCanvas(810, 810);
     canvas.parent('sketch-holder');
     
-    console.log(result[0]);
-    
-    console.log(result);
-    
-    lastResult = result[0];
-    
-    for (var i = 0; i < 9; i++) {
-      board[i] = lastResult.substring(i*9, i*9+9);
-    }
-//    
+    getBoard(result.length-1)
+  
     background(255);
 }
 
