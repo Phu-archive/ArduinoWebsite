@@ -46,14 +46,16 @@ function getBoard(loc){
 
 function preload() {
     result = loadStrings('data.txt');
-    if(result.length == 0){
-        alert("There is no content in the history.");
-    }
+    
 }
 
 function setup(){
     var canvas = createCanvas(810, 810);
     canvas.parent('sketch-holder');
+    
+    if(result.length == 0){
+        alert("There is no content in the history.");
+    }
     
     board = getBoard(result.length-1);
 
