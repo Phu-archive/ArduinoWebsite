@@ -18,8 +18,6 @@
         
         fclose($fh);
       ?>
-    
-    <p></p>
     <button type="button">Delete</button>
     
     <script type="text/javascript">
@@ -31,12 +29,15 @@
                     url: 'delete.php',
                     success: function(data) {
                         alert("Delete Successful");
-                        $("p").text("");
                     }
                 });
        });
     });
     </script>
+    
+    <div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+    </div>
 
 </body>
 </html>
