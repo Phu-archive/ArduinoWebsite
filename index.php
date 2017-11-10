@@ -16,7 +16,6 @@
             $fh = fopen('data.txt','r');
             while ($line = fgets($fh)) {
               echo($line);
-              echo "<p class="lead">$line</p>"
             }
 
             fclose($fh);
