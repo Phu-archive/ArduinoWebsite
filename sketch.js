@@ -5,6 +5,8 @@ function setup(){
     canvas.parent('sketch-holder');
     result = loadStrings('data.txt');
     
+    console.log(result);
+    
     for (var y = 0; y < 9; y++) {
         board[y] = [0,0,0,0,0,0,0,0,0]
     }
