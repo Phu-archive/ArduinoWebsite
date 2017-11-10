@@ -49,7 +49,6 @@ function setup(){
     var canvas = createCanvas(810, 810);
     canvas.parent('sketch-holder');
     
-    board = getBoard(result.length-1);
     slider = createSlider(0, result.length-1, result.length-1, 1);
   
     background(255);
@@ -59,7 +58,7 @@ function setup(){
 function draw(){
     drawUpdateGrid();
     
-    console.log(board);
+    console.log(slider.value());
     board = getBoard(slider.value());
 
     // Draing a grid.
