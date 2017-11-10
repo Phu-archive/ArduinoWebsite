@@ -35,11 +35,13 @@ function setup(){
     canvas.parent('sketch-holder');
     result = loadStrings('data.txt');
     
-    lastResult = result[0];
+    
     
     console.log(result[0]);
     
     console.log(result);
+    
+    lastResult = result[0];
     
     for (var i = 0; i < 9; i++) {
       board[i] = lastResult.substring(i*9, i*9+9);
