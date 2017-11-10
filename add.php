@@ -1,16 +1,17 @@
 <?php
-           if( $_POST["clean"]){
-               file_put_contents("data.txt", "");
-           }
-           if( $_POST["state"]) {
+  if( $_POST["state"]) {
+    // If there is a POST request called state.
 
-              $state = $_POST['state'];
-               
-              $file = file_put_contents('data.txt', $state.PHP_EOL , FILE_APPEND | LOCK_EX);
-            
-              fclose($file);
-              
-              exit();
-           }
-            
+    // Get the content
+    $state = $_POST['state'];
+
+    // Store to the data.txt
+    $file = file_put_contents('data.txt', $state.PHP_EOL , FILE_APPEND | LOCK_EX);
+
+    // Close the file
+    fclose($file);
+
+    // Exit.
+    exit();
+  }
 ?>
