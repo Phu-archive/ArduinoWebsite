@@ -1,6 +1,7 @@
 var board = [];
 var coord = [];
 var current_player = 1;
+var result = "";
 
 // This is the drawing part of the program.
 function drawRectAtBoardPos(pos_x, pos_y, player_number){
@@ -30,12 +31,13 @@ function drawUpdateGrid(){
   }
 }
 
+function preload() {
+  result = loadStrings('data.txt');
+}
+
 function setup(){
     var canvas = createCanvas(810, 810);
     canvas.parent('sketch-holder');
-    result = loadStrings('data.txt');
-    
-    
     
     console.log(result[0]);
     
