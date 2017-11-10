@@ -32,7 +32,7 @@ function drawUpdateGrid(){
 }
 
 function getBoard(loc){
-    bo = []
+    var bo = []
     lastResult = result[loc]
     for (var i = 0; i < 9; i++) {
       bo[i] = lastResult.substring(i*9, i*9+9);
@@ -60,6 +60,7 @@ function draw(){
 
     console.log(slider.value());
     board = getBoard(slider.value());
+    console.log(board)
     
     drawUpdateGrid();
 
