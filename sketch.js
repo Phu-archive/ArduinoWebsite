@@ -34,6 +34,7 @@ function setup(){
     var canvas = createCanvas(810, 810);
     canvas.parent('sketch-holder');
     result = loadStrings('data.txt');
+    console.log(result)
 //    
 //    var lastResult = result[result.length-1]
     
