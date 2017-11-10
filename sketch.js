@@ -36,10 +36,12 @@ function drawUpdateGrid(board){
 function getBoard(loc){
     var bo = []
     var lastResult = result[loc]
-    console.log(lastResult);
+    
     for (var i = 0; i < 9; i++) {
       bo[i] = lastResult.substring(i*9, i*9+9);
     }
+    
+    console.log(bo);
     
     return bo;
 }
