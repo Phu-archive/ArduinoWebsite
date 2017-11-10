@@ -20,26 +20,30 @@
 
             fclose($fh);
           ?>
-        <button type="button" class="btn btn-primary btn-lg">Delete</button>
+        
+        <div class="col">
+            <div id="sketch-holder">
+              <!-- Our sketch will go here! -->
+            </div>
 
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $("button").click(function(){
+            <button type="button" class="btn btn-primary btn-lg row-md-offset-2">Delete</button>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $("button").click(function(){
 
-                    $.ajax({
-                        type: 'POST',
-                        url: 'delete.php',
-                        success: function(data) {
-                            alert("Delete Successful");
-                        }
-                    });
-           });
-        });
-        </script>
-
-        <div id="sketch-holder">
-          <!-- Our sketch will go here! -->
+                        $.ajax({
+                            type: 'POST',
+                            url: 'delete.php',
+                            success: function(data) {
+                                alert("Delete Successful");
+                            }
+                        });
+               });
+            });
+            </script>
         </div>
+        
+        
     </div>
 </body>
 </html>
