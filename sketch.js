@@ -78,7 +78,6 @@ function draw(){
     
     var val = slider.value();
     board = getBoard(val);
-//    console.log(slider.value());
-//    
-    drawUpdateGrid(board);
+  
+    setTimeout(drawUpdateGrid(board), 100);
 }
