@@ -50,15 +50,16 @@ function setup(){
     canvas.parent('sketch-holder');
     
     slider = createSlider(0, result.length-1, result.length-1, 1);
-  
+    board = getBoard(result.length-1);
+
     background(255);
 }
 
 
 function draw(){
     drawUpdateGrid();
-    
-    console.log(slider.value());
+
+    console.log(slider.value);
     board = getBoard(slider.value());
 
     // Draing a grid.
