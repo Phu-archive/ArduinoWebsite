@@ -34,15 +34,16 @@ function setup(){
     var canvas = createCanvas(810, 810);
     canvas.parent('sketch-holder');
     result = loadStrings('data.txt');
-    console.log(result[0])
-//    
-//    var lastResult = result[result.length-1]
+    
+    lastResult = result[0];
+    
+    console.log(result[0]);
     
     console.log(result);
-//    
-//    for (var i = 0; i < 9; i++) {
-//      board[i] = lastResult.substring(i*9, i*9+9);
-//    }
+    
+    for (var i = 0; i < 9; i++) {
+      board[i] = lastResult.substring(i*9, i*9+9);
+    }
 //    
     background(255);
 }
