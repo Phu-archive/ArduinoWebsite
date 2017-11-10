@@ -45,7 +45,8 @@ function getBoard(loc){
 }
 
 function preload() {
-  result = loadStrings('data.txt');
+    result = loadStrings('data.txt');
+    console.log(result);
 }
 
 function setup(){
@@ -75,11 +76,7 @@ function draw(){
       line(0, 90 * i, 810, 90 * i);
     }
     
-    console.log(slider.value());
     board = getBoard(slider.value());
-    console.log(board)
-    
-    drawRectAtBoardPos(9,9,1);
     
     drawUpdateGrid(board);
 }
