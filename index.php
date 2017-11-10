@@ -11,22 +11,25 @@
         <h1 class"display-3">Log Information</h1>
 
 
-          <?php
-
-            $fh = fopen('data.txt','r');
-            while ($line = fgets($fh)) {
-              echo($line);
-            }
-
-            fclose($fh);
-          ?>
+          
         
-        <div class="col">
+        <div class="col row-md-offset-2">
+            
+            <?php
+
+                $fh = fopen('data.txt','r');
+                while ($line = fgets($fh)) {
+                  echo($line);
+                }
+
+                fclose($fh);
+              ?>
+            
             <div id="sketch-holder">
               <!-- Our sketch will go here! -->
             </div>
 
-            <button type="button" class="btn btn-primary btn-lg row-md-offset-2">Delete</button>
+            <button type="button" class="btn btn-primary btn-lg ">Delete</button>
             <script type="text/javascript">
                 $(document).ready(function(){
                     $("button").click(function(){
