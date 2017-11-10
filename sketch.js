@@ -59,7 +59,7 @@ function setup(){
 function draw(){
     drawUpdateGrid();
     
-    console.log(slider.value());
+    board = getBoard(slider.value());
 
     // Draing a grid.
     stroke(0);
