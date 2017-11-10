@@ -17,12 +17,6 @@
         fclose($fh);
       ?>
     
-<!--
-    <form action="delete.php">
-       <input type="submit" value="Submit">
-     </form> 
--->
-    
     <button type="button">Delete</button>
     <p></p>
     <script type="text/javascript">
@@ -34,6 +28,7 @@
                     url: 'delete.php',
                     success: function(data) {
                         alert("Delete Successful");
+                        $("p").text(data);
                     }
                 });
        });
