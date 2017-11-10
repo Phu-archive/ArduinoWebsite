@@ -3,6 +3,11 @@ function setup(){
     canvas.parent('sketch-holder');
     background(255, 0, 200);
 }
+
+function preload() {
+  result = loadStrings('data.txt');
+}
+
 function draw(){
-    ellipse(50, 50, 80, 80);
+    text(result, 10, 10, 80, 80);
 }
