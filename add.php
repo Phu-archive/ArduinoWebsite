@@ -2,14 +2,11 @@
            if( $_POST["clean"]){
                file_put_contents("data.txt", "");
            }
-           if( $_POST["x"] || $_POST["y"] ) {
+           if( $_POST["state"]) {
 
-              $x = $_POST['x'];
-              $y = $_POST['y'];
+              $state = $_POST['state'];
                
-              $add = $x . " " . $y . ", ";
-               
-              $file = file_put_contents('data.txt', $add.PHP_EOL , FILE_APPEND | LOCK_EX);
+              $file = file_put_contents('data.txt', $state.PHP_EOL , FILE_APPEND | LOCK_EX);
             
               fclose($file);
               

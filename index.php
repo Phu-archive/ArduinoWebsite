@@ -8,15 +8,10 @@
    </head>
 <body>
     <div class="container">
-        <h1 class"display-3">Log Information</h1>
+        <h1 class"display-3">Last Game</h1>
 
-
-          
-        
         <div class="col row-md-offset-2">
-            <div id="sketch-holder">
-              <!-- Our sketch will go here! -->
-            </div>
+            <div id="sketch-holder"></div>
 
             <button type="button" class="btn btn-primary btn-lg ">Delete</button>
             <script type="text/javascript">
