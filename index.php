@@ -12,10 +12,13 @@
         while ($line = fgets($fh)) {
           echo($line);
         }
-        file_put_contents("data.txt", "");
+        
         fclose($fh);
       ?>
+    
+    <form action="delete.php">
+       <input type="submit" value="Submit">
+     </form> 
 
-   </table>
 </body>
 </html>
