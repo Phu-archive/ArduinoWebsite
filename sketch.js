@@ -76,7 +76,5 @@ function draw(){
       line(0, 90 * i, 810, 90 * i);
     }
     
-    board = getBoard(val);
-    
-    drawUpdateGrid(board), 1000;
+    drawUpdateGrid(board);
 }
