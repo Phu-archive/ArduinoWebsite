@@ -1,8 +1,6 @@
 <?php
-        echo ("works");
            if( $_POST["clean"]){
                file_put_contents("data.txt", "");
-               echo "works2";
            }
            if( $_POST["x"] || $_POST["y"] ) {
 
